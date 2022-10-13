@@ -1,0 +1,12 @@
+.navigation__list {
+  display: flex;
+}
+
+.navigation__link {
+  color: white;
+  font-size: 1.25em;
+  margin: 0 4px;
+  padding: 4px;
+  text-decoration: none;
+}
+

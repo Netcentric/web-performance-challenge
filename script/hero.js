@@ -1,0 +1,1 @@
+const heroImage = $('.hero__img');
