@@ -1,0 +1,30 @@
+.header__base {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0 30px;
+  max-width: 1200px;
+}
+
+.header__image {
+  width: 250px;
+}
+
+.navigation__list {
+  display: flex;
+}
+
+.navigation__link {
+  color: var(--text-color);
+  font-size: 1.25em;
+  margin: 0 4px;
+  padding: 4px;
+  text-decoration: none;
+}
+

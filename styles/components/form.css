@@ -1,0 +1,21 @@
+.form__base {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 40px;
+}
+
+.form__label {
+  display: block;
+}
+
+.form__button {
+  padding: 2px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: gray;
+}
+
+.form__button:hover {
+  cursor: default;
+}

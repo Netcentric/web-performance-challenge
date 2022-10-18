@@ -1,0 +1,17 @@
+.footer__base {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.footer__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 30px;
+  max-width: 1200px;
+}
+
+.footer__link {
+  margin-right: 20px;
+}

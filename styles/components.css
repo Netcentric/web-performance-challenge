@@ -1,4 +1,8 @@
-@import url(components/card.css);
-@import url(components/gridbox.css);
+@import url(components/teaser.css);
 @import url(components/logo.css);
-@import url(components/navigation.css);
+@import url(components/header.css);
+@import url(components/footer.css);
+@import url(components/hero.css);
+@import url(components/disclaimer.css);
+@import url(components/swiper.css);
+@import url(components/form.css);

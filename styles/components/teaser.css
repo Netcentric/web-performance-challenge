@@ -1,0 +1,20 @@
+.teaser__base {
+  width: 32%;
+  padding: 1.35rem;
+  border-radius: 4px;
+  border: 1px solid rgb(54, 54, 54);
+}
+
+.teaser__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.teaser__text {
+  margin: 16px 0;
+}
+
+.teaser__link {
+  text-align: end;
+}
+

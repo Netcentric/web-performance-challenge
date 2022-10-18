@@ -1,0 +1,9 @@
+.disclaimer__base {
+    background: var(--color-light-gray);
+  }
+  
+.disclaimer__text {
+    padding: 30px;
+    max-width: 1200px;
+    text-align: center;
+}

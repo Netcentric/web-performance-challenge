@@ -1,0 +1,19 @@
+.hero__teaser {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero__teaserText {
+  position: absolute;
+  left: 5%;
+  top: 60%;
+  max-width: 80%;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.hero__carousel {
+  height: 100%;
+}

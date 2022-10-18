@@ -1,8 +1,11 @@
 /* generics */
 @import url(generics.css);
 
-/* elements */
-@import url(elements.css);
+/* variables */
+@import url(variables.css);
+
+/* main */
+@import url(main.css);
 
 /* components */
 @import url(components.css);

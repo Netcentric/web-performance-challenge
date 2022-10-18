@@ -4,9 +4,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="http://slowfil.es/file?type=css&delay=1000&sync-in-head" />
   <script src="https://slowfil.es/file?type=js&delay=1500&sync-in-head&01"></script>
-  <link rel="stylesheet" href="importer.css" />
   <link rel="stylesheet" href="styles/index.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
     var script = document.createElement('script');
     script.src = "https://slowfil.es/file?type=js&delay=1000&async-snippet-in-head";
@@ -14,13 +13,18 @@
   </script>
   <input type="hidden" id="csrf_token" value="ZGlkIHlvdSBmaW5kIG1lPwo=" />
   <script src="https://slowfil.es/file?type=js&delay=1000&sync-in-head&02"></script>
-  <style>
-    @import url("https://slowfil.es/file?type=css&delay=1000&imported-from-html");
-  </style>
   <link rel="preload" href="background.jpg" as="image">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <script>
+    // advertisment mock
+    const initAd = () => {
+      const adSpace = document.querySelector('.main__advertising');
+      const gif = '<div style="width:400px;max-width:100%;"><div style="height:0;padding-bottom:52.4%;position:relative;"><iframe width="500" height="262" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/6wy03z"></iframe></div></div>';
+      setTimeout(() => adSpace.innerHTML = gif, 3000);
+    };
     // Slow JS
     function wait(ms) {
       var start = Date.now(),
@@ -28,215 +32,144 @@
       while (now - start < ms) {
         now = Date.now();
       }
-    }
+    };
     // anti flicker
-    const antiflicker = () => {
-      document.body.style.visibility = 'hidden';
-      window.addEventListener('load', () => {
-        document.body.removeAttribute('style');
-        console.log('rxe')
-      });
-    }
+    document.body.style.visibility = 'hidden';
+
     wait(1000);
-    antiflicker();
+    window.addEventListener('load', () => {
+      document.body.removeAttribute('style');
+      initAd();
+    });
+    // antiflicker();
   </script>
-  <title>Get Your &lt;head&gt; Straight</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js'></script>
+  <title>The Rum Diary</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
 </head>
 <body>
-  <header>
-    <a class="logo" href="#">
-      <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-          style=" fill:#000000;"
-          width="80" height="60">
-          <metadata>
-            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                    xmlns:connect="http://www.w3.org/1999/08/29-svg-connections-in-RDF#">
-              <rdf:Description about="#TypeA">
-                <connect:ends rdf:resource="#line1"/>
-                <connect:ends rdf:resource="#line2"/>
-                <connect:ends rdf:resource="#line3"/>
-                <connect:ends rdf:resource="#box1"/>
-                <connect:ends rdf:resource="#box2"/>
-              </rdf:Description>
-              <rdf:Description about="#TypeB">
-                <connect:ends rdf:resource="#line1"/>
-                <connect:ends rdf:resource="#line2"/>
-                <connect:ends rdf:resource="#line3"/>
-                <connect:ends rdf:resource="#box1"/>
-              </rdf:Description>
-              <rdf:Description about="#stroke">
-                <connect:ends rdf:resource="#stroke1"/>
-                <connect:ends rdf:resource="#stroke2"/>
-                <connect:ends rdf:resource="#stroke3"/>
-                <connect:ends rdf:resource="#gradient-for-first-element"/>
-                <connect:ends rdf:resource="#gradient-for-second-element"/>
-                <connect:ends rdf:resource="#gradient-for-third-element"/>
-              </rdf:Description>
-              <rdf:Description about="#animation">
-                <connect:ends rdf:resource="#first-element"/>
-                <connect:ends rdf:resource="#TypeA"/>
-                <connect:ends rdf:resource="#TypeB"/>
-                <connect:ends rdf:resource="#animate"/>
-                <connect:ends rdf:resource="#animate2"/>
-                <connect:ends rdf:resource="#animate-end"/>
-              </rdf:Description>
-            </rdf:RDF>
-          </metadata>
-          <defs>
-            <circle id="circle1" cx="0" cy="0" r="5" />
-
-            <linearGradient id="gradient-for-first-element" gradientTransform="rotate(180)">
-              <stop offset="0%" stop-color="white" />
-              <stop offset="100%" stop-color="black" />
-            </linearGradient>
-            <linearGradient id="gradient-for-second-element" gradientTransform="rotate(180)">
-              <stop offset="10%" stop-color="white" />
-              <stop offset="90%" stop-color="black" />
-            </linearGradient>
-            <linearGradient id="gradient-for-third-element" gradientTransform="rotate(180)">
-              <stop offset="20%" stop-color="white" />
-              <stop offset="80%" stop-color="black" />
-            </linearGradient>
-            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-              <stop id="stop1" stop-color="rgba(248, 117, 55, 1)" offset="0%"></stop>
-              <stop id="stop2" stop-color="rgba(251, 168, 31, 1)" offset="100%"></stop>
-            </linearGradient>
-
-            <!-- for animation -->
-            <path d="M20.4,-27C25.5,-20.1,27.9,-12.7,30.5,-4.4C33.2,4,36.1,13.3,33.7,21.3C31.2,29.3,23.4,36.1,15.1,37.2C6.9,38.3,-1.9,33.7,-11.5,30.6C-21.1,27.5,-31.5,25.9,-35.2,20C-39,14.2,-36,4.2,-32.9,-4.5C-29.8,-13.2,-26.7,-20.6,-21.2,-27.5C-15.7,-34.3,-7.8,-40.6,-0.1,-40.5C7.7,-40.4,15.4,-34,20.4,-27Z" transform="translate(50 50)" stroke-width="0"></path>
-            <path fill="none" d="M4.3,-10.4C7.4,-5.6,13.2,-8.3,15.7,-7.8C18.2,-7.3,17.5,-3.7,20.5,1.7C23.5,7.1,30.3,14.3,28.4,15.9C26.6,17.5,16.1,13.6,9.9,17C3.7,20.4,1.9,31,-2.3,35C-6.5,39,-13,36.3,-18.5,32.6C-24.1,28.8,-28.7,24,-26.8,18.4C-24.9,12.8,-16.4,6.4,-17.6,-0.7C-18.9,-7.8,-29.8,-15.7,-30.3,-18.9C-30.9,-22.1,-21,-20.7,-14.2,-23.5C-7.4,-26.3,-3.7,-33.2,-1.6,-30.5C0.5,-27.7,1.1,-15.3,4.3,-10.4Z" transform="translate(50 50)" stroke-width="1" style="transition: all 0.3s ease 0s;"></path>
-            <path id="animate" d="M20.4,-27C25.5,-20.1,27.9,-12.7,30.5,-4.4C33.2,4,36.1,13.3,33.7,21.3C31.2,29.3,23.4,36.1,15.1,37.2C6.9,38.3,-1.9,33.7,-11.5,30.6C-21.1,27.5,-31.5,25.9,-35.2,20C-39,14.2,-36,4.2,-32.9,-4.5C-29.8,-13.2,-26.7,-20.6,-21.2,-27.5C-15.7,-34.3,-7.8,-40.6,-0.1,-40.5C7.7,-40.4,15.4,-34,20.4,-27Z" fill="white" width="0"></path>
-            <path d="M19.3,-37.1C22.3,-31.6,20.3,-21.1,17.3,-14C14.4,-7,10.7,-3.5,11.3,0.3C11.9,4.2,16.9,8.4,18.5,13.3C20.2,18.1,18.5,23.6,14.9,22.9C11.2,22.1,5.6,15,-0.7,16.2C-7,17.4,-14,26.9,-15,26.1C-16,25.4,-11.1,14.5,-13.5,8.4C-15.9,2.4,-25.5,1.2,-29.1,-2.1C-32.7,-5.3,-30.1,-10.6,-28.3,-17.6C-26.5,-24.5,-25.3,-33.1,-20.7,-37.8C-16.1,-42.4,-8,-43.1,0,-43.1C8.1,-43.2,16.2,-42.7,19.3,-37.1Z"></path>
-            <path d="M19.9,-34.5C24.4,-31.8,25.9,-23.8,29.2,-17.2C32.6,-10.5,37.8,-5.3,40.1,1.3C42.3,7.8,41.5,15.7,36.7,19.8C31.9,23.9,23.1,24.3,16.3,25.3C9.5,26.3,4.8,27.8,0.5,27C-3.9,26.2,-7.7,23.1,-9.4,19.2C-11.1,15.3,-10.6,10.6,-9.8,7.2C-9,3.9,-8,1.9,-11.9,-2.2C-15.8,-6.4,-24.6,-12.9,-27.4,-19.8C-30.2,-26.6,-27.1,-34,-21.5,-36.1C-15.9,-38.3,-8,-35.3,-0.2,-35C7.7,-34.7,15.3,-37.3,19.9,-34.5Z"></path>
-            <path d="M22.2,-34.9C28.8,-34.6,34.1,-28.7,36.9,-22C39.6,-15.2,39.7,-7.6,34.3,-3.1C28.9,1.4,18.1,2.8,12.4,4.4C6.7,5.9,6,7.6,4.8,13C3.6,18.5,1.8,27.6,-0.8,29C-3.4,30.4,-6.8,24,-9.2,19.3C-11.6,14.6,-13.1,11.5,-14.3,8.5C-15.5,5.6,-16.4,2.8,-15.8,0.4C-15.1,-2,-12.8,-4,-13.5,-10.3C-14.2,-16.6,-18,-27.1,-16.2,-30.2C-14.5,-33.3,-7.3,-28.9,0.3,-29.3C7.8,-29.8,15.6,-35.1,22.2,-34.9Z"></path>
-            <path d="M20.4,-34.7C27.1,-31.4,33.6,-27.3,38.2,-21.4C42.7,-15.5,45.3,-7.7,44.3,-0.6C43.3,6.6,38.8,13.2,34,18.7C29.2,24.2,24.1,28.5,18.3,32C12.6,35.5,6.3,38.3,-0.7,39.5C-7.7,40.8,-15.5,40.5,-21.9,37.4C-28.4,34.3,-33.5,28.3,-37,21.6C-40.5,14.9,-42.4,7.4,-41.6,0.5C-40.8,-6.5,-37.4,-13,-33.7,-19.5C-30,-25.9,-26.1,-32.2,-20.5,-36.1C-14.9,-40,-7.4,-41.5,-0.3,-41C6.8,-40.5,13.7,-38,20.4,-34.7Z"></path>
-            <path id="animate2" d="M20.4,-27C25.5,-20.1,27.9,-12.7,30.5,-4.4C33.2,4,36.1,13.3,33.7,21.3C31.2,29.3,23.4,36.1,15.1,37.2C6.9,38.3,-1.9,33.7,-11.5,30.6C-21.1,27.5,-31.5,25.9,-35.2,20C-39,14.2,-36,4.2,-32.9,-4.5C-29.8,-13.2,-26.7,-20.6,-21.2,-27.5C-15.7,-34.3,-7.8,-40.6,-0.1,-40.5C7.7,-40.4,15.4,-34,20.4,-27Z" fill="white" width="0"></path>
-            <path d="M19.9,-34.5C24.4,-31.8,25.9,-23.8,29.2,-17.2C32.6,-10.5,37.8,-5.3,40.1,1.3C42.3,7.8,41.5,15.7,36.7,19.8C31.9,23.9,23.1,24.3,16.3,25.3C9.5,26.3,4.8,27.8,0.5,27C-3.9,26.2,-7.7,23.1,-9.4,19.2C-11.1,15.3,-10.6,10.6,-9.8,7.2C-9,3.9,-8,1.9,-11.9,-2.2C-15.8,-6.4,-24.6,-12.9,-27.4,-19.8C-30.2,-26.6,-27.1,-34,-21.5,-36.1C-15.9,-38.3,-8,-35.3,-0.2,-35C7.7,-34.7,15.3,-37.3,19.9,-34.5Z"></path>
-            <path d="M22.2,-34.9C28.8,-34.6,34.1,-28.7,36.9,-22C39.6,-15.2,39.7,-7.6,34.3,-3.1C28.9,1.4,18.1,2.8,12.4,4.4C6.7,5.9,6,7.6,4.8,13C3.6,18.5,1.8,27.6,-0.8,29C-3.4,30.4,-6.8,24,-9.2,19.3C-11.6,14.6,-13.1,11.5,-14.3,8.5C-15.5,5.6,-16.4,2.8,-15.8,0.4C-15.1,-2,-12.8,-4,-13.5,-10.3C-14.2,-16.6,-18,-27.1,-16.2,-30.2C-14.5,-33.3,-7.3,-28.9,0.3,-29.3C7.8,-29.8,15.6,-35.1,22.2,-34.9Z"></path>
-            <path d="M20.4,-34.7C27.1,-31.4,33.6,-27.3,38.2,-21.4C42.7,-15.5,45.3,-7.7,44.3,-0.6C43.3,6.6,38.8,13.2,34,18.7C29.2,24.2,24.1,28.5,18.3,32C12.6,35.5,6.3,38.3,-0.7,39.5C-7.7,40.8,-15.5,40.5,-21.9,37.4C-28.4,34.3,-33.5,28.3,-37,21.6C-40.5,14.9,-42.4,7.4,-41.6,0.5C-40.8,-6.5,-37.4,-13,-33.7,-19.5C-30,-25.9,-26.1,-32.2,-20.5,-36.1C-14.9,-40,-7.4,-41.5,-0.3,-41C6.8,-40.5,13.7,-38,20.4,-34.7Z"></path>
-            <path id="animate-end" d="M20.4,-27C25.5,-20.1,27.9,-12.7,30.5,-4.4C33.2,4,36.1,13.3,33.7,21.3C31.2,29.3,23.4,36.1,15.1,37.2C6.9,38.3,-1.9,33.7,-11.5,30.6C-21.1,27.5,-31.5,25.9,-35.2,20C-39,14.2,-36,4.2,-32.9,-4.5C-29.8,-13.2,-26.7,-20.6,-21.2,-27.5C-15.7,-34.3,-7.8,-40.6,-0.1,-40.5C7.7,-40.4,15.4,-34,20.4,-27Z" fill="white" width="0"></path>
-            
-            <line id="line1" x1="0" y1="80" x2="100" y2="20" stroke="black" />
-            <line id="line2" x1="0" y1="180" x2="100" y2="120" stroke="black" />
-            <line id="line3" x1="0" y1="280" x2="100" y2="220" stroke="black" />
-          </defs>
-          <path width="100%" height="100%" fill="url(#sw-gradient)" d="M24.6,-29.5C31.5,-23.6,36.3,-15.4,36.1,-7.7C35.9,0.1,30.7,7.4,26.3,15.5C22,23.5,18.5,32.3,11.8,36.4C5.2,40.4,-4.5,39.8,-11.5,35.6C-18.6,31.3,-22.9,23.5,-23.3,16.5C-23.8,9.5,-20.3,3.3,-18.7,-2.8C-17.1,-8.9,-17.3,-14.9,-14.5,-21.4C-11.6,-28,-5.8,-35.2,1.5,-37C8.9,-38.9,17.8,-35.3,24.6,-29.5Z" transform="translate(39 23) rotate(90)">
-            <title>Web Performance</title>
-          </path>
-        </svg>
-    </a>
-    <nav class="navigation" aria-label="main navigation">
-      <ul class="navigation__list" role="menubar">
-        <li class="navigation__item" role="none">
-          <a class="navigation__link" href="#" role="menuitem">
-            Articles
-          </a>
-        </li>
-        <li class="navigation__item" role="none">
-          <a class="navigation__link" href="#" role="menuitem">
-            About
-          </a>
-        </li>
-        <li class="navigation__item" role="none">
-          <a class="navigation__link" href="#" role="menuitem">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
+  <header class="header__base">
+    <div class="header__content">
+      <a class="header__logo" href="#">
+        <img class="header__image" src="./logo.png">
+      </a>
+      <div class="header__navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">
+              Articles
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">
+              About
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <img data-src="banner.png" alt="" class="hero__img">
-    </section>
-    <script src="script/hero.js"></script>
+  <main class="main__base">
+    <div class="main__advertising"></div>
+    
+    <div class="main__content">
+      <div class="main__news main__section">
+        <marquee width="100%" direction="left" style="line-height: 30px;background-color: darkred;color: red;"></marquee>
+      </div>
+      
+      <div class="main__hero main__section">
+        <div class="hero__carousel div1 swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img data-src="https://images.unsplash.com/flagged/photo-1579632993381-847f6a71a3cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+          </div>
+          <div class="swiper-text">Local restaurants finally optimising time to first bite</div>
+        </div>
+        <script src="script/carousel.js"></script>
+        
+        <div class="hero__teaser div2">
+          <img data-src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=400&q=100" alt="" class="hero__img">
+          <div class="hero__teaserText">Top 10 waterfalls to analyse this week</div>
+        </div>
+        <div class="hero__teaser div3">
+          <img data-src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/06/little_girl_-bouncing-off-the-trampoline-1296x728-header.jpg?w=1155&h=1528" alt="" class="hero__img">
+          <div class="hero__teaserText">Bouncing rates increased signifincantly last week</div>
+        </div>
+      </div>
 
-    <section class="gridbox">
-      <article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article>
-      <article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article>
-      <article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article>
-      <article class="gridbox__item">
-        <section class="card">
-          <iframe class="card__img" src="https://www.youtube.com/embed/YadeD-_Cm9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
-      </article>
-      <article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article>
-      <article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article><article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article>
-      <article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article><article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article>
-      <article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article><article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article>
-      <article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article><article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article>
-      <article class="gridbox__item">
-        <section class="card">
-          <img data-src="image-tree.jpg" alt="" class="card__img">
-          <hr>
-        </section>
-      </article>
-    </section>
-    <script src="script/gridbox.js"></script>
+      <div class="main__teasers main__section">
+        <article class="teaser__base">
+          <img class="teaser__image" src="https://images.unsplash.com/photo-1631857455684-a54a2f03665f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100" alt="" class="card__img"><hr>
+          <h1 class="teaser__title">First Party</h1>
+          <div class="teaser__text"></div>
+          <button class="teaser__link">Read more</button>
+        </article>
+        <article class="teaser__base">
+          <img class="teaser__image" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100" alt="" class="card__img"><hr>
+          <h1 class="teaser__title">Second Party</h1>
+          <div class="teaser__text"></div>
+          <button class="teaser__link">Read more</button>
+        </article>
+        <article class="teaser__base">
+          <img class="teaser__image" src="https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100" alt="" class="card__img"><hr>
+          <h1 class="teaser__title">Third Party</h1>
+          <div class="teaser__text"></div>
+          <button class="teaser__link">Read more</button>
+        </article>
+      </div>
+      
+      <div class="main__weather main__section">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/48d1411d58/munich/" data-label_1="MUNICH" data-label_2="WEATHER" data-theme="original" >MUNICH WEATHER</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+      </div>
+      
+      <div class="main__video main__section">
+        <iframe src="https://player.vimeo.com/video/44265326?h=1e8b36c00b&autoplay=1&loop=1&byline=0&muted=1&controls=0 " width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <div class="form__base">
+          <div class="form__intro">Something about lighthouses, describing point of the video we are putting here to prove how awesome they really are, no.</div>
+          <div class="from__control">
+            <label class="form__label">Name</label>
+            <input type="text" />
+          </div>
+          <div class="from__control">
+            <label class="form__label">Please share with us why do you think lighthouses are awesome: </label>
+            <textarea></textarea>
+          </div>
+          <a class="form__button" id="button" onclick="alert('Submitting using way too much JavaScript...')">Submit</a>
+        </div>
+    </div>
   </main>
+  
+  <div class="disclaimer__base">
+    <p class="disclaimer__text">
+      This site is made for the purpose of web performance and accessibility testing challeng and it is full of bad practices on purpose.
+    </p>
+  </div>
+  
+  <div class="footer__base">
+    <div class="footer__content">
+      <div class="footer__menu">
+        <a href="#" class="footer__link">About Us</a>
+        <a href="https://www.netcentric.biz/legal/imprint.html" class="footer__link">Imprint</a>
+        <a href="https://www.netcentric.biz/legal/privacy.html" class="footer__link">Privacy</a>
+      </div>
+      <div class="footer__sponsor">Powered by <a href="https://www.netcentric.biz/">Cognizant Netcentric</a></div>
+    </div>
+  </div>
   <script src="script/app.js"></script>
 </body>
 </html>
