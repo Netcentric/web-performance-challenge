@@ -8,5 +8,5 @@ Idea of the challenge is to find and fix as many issues as possible.
 
 1. Fork the repository
 2. Create a GitHub page
-3. Test the GitHub page URL with https://www.webpagetest.com/
+3. Test the GitHub page URL with https://www.webpagetest.org/
 4. Fix issues you find for page to be as accessible and fast as possible
