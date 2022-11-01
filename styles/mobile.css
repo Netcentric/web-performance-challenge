@@ -1,0 +1,33 @@
+@media screen and (max-width: 750px) {
+  .header__content {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  .main__hero {
+    display: flex;
+    flex-direction: column;
+    height: 900px;
+  }
+
+  .hero__carousel {
+    height: inherit;
+  }
+
+  .swiper-text {
+    top: 50%;
+  }
+
+  .main__teasers {
+    flex-direction: column;
+
+  }
+
+  .teaser__base {
+    width: 100%;
+  }
+
+  .cookieLayer__base {
+    bottom: 0;
+  }
+}

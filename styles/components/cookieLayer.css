@@ -1,0 +1,31 @@
+.cookieLayer__base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: var(--color-white);
+  background-color: var(--background-color);
+  padding: 100px;
+  font-family: 'Architects Daughter', serif;
+  z-index: 2;
+  box-shadow: 0 5px 3px -2px #e4e4e4
+}
+
+.cookieLayer__base--hidden {
+  display: none;
+}
+
+.cookieLayer__title {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.cookieLayer__text {
+  margin-bottom: 20px;
+}
+
+.cookieLayer__disclaimer {
+  font-size: 10px;
+  color: var(--color-gray);
+}
+

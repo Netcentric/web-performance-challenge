@@ -1,1 +1,6 @@
 @import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
+
+.no-scroll {
+  height: 100%;
+  overflow-y: hidden;
+}

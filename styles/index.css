@@ -9,3 +9,6 @@
 
 /* components */
 @import url(components.css);
+
+/* fonts */
+@import url(fonts.css);

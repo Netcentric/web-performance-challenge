@@ -1,23 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="http://slowfil.es/file?type=css&delay=1000&sync-in-head" />
-  <script src="https://slowfil.es/file?type=js&delay=1500&sync-in-head&01"></script>
   <link rel="stylesheet" href="styles/index.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-    var script = document.createElement('script');
-    script.src = "https://slowfil.es/file?type=js&delay=1000&async-snippet-in-head";
-    document.head.appendChild(script);
-  </script>
-  <input type="hidden" id="csrf_token" value="ZGlkIHlvdSBmaW5kIG1lPwo=" />
-  <script src="https://slowfil.es/file?type=js&delay=1000&sync-in-head&02"></script>
   <link rel="preload" href="background.jpg" as="image">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/alegreya-v29-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/alegreya-v29-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <script src="https://slowfil.es/file?type=js&delay=2000"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuex"></script>
+  <script>
+    // Adobe Target pre-hiding code snippet 
+    ;(function(win, doc, style, timeout) {
+      var STYLE_ID = 'at-body-style';
+
+      function getParent() {
+        return doc.getElementsByTagName('head')[0];
+      }
+
+      function addStyle(parent, id, def) {
+        if (!parent) {
+          return;
+        }
+
+        var style = doc.createElement('style');
+        style.id = id;
+        style.innerHTML = def;
+        parent.appendChild(style);
+      }
+
+      function removeStyle(parent, id) {
+        if (!parent) {
+          return;
+        }
+
+        var style = doc.getElementById(id);
+
+        if (!style) {
+          return;
+        }
+
+        parent.removeChild(style);
+      }
+
+      addStyle(getParent(), STYLE_ID, style);
+      setTimeout(function() {
+        removeStyle(getParent(), STYLE_ID);
+      }, timeout);
+    }(window, document, "body {opacity: 0 !important}", 3000));
+  </script>
   <script>
     // advertisment mock
     const initAd = () => {
@@ -33,24 +68,30 @@
         now = Date.now();
       }
     };
-    // anti flicker
-    document.body.style.visibility = 'hidden';
 
-    wait(1000);
+    // async CSS
+    function loadMobileCSS() {
+      $('head').append(`<link rel="stylesheet" type="text/css" href="styles/mobile.css">`);
+    };
+
+    wait(2000);
     window.addEventListener('load', () => {
-      document.body.removeAttribute('style');
       initAd();
+      loadMobileCSS();
     });
-    // antiflicker();
   </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
   <title>The Rum Diary</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
 </head>
 <body>
+  <div id="cookie-vue">
+    <cookie-layer class="cookieLayer__base" v-show="displayCookieBox" v-on:accept="acceptCookies()"/>
+  </div>
   <header class="header__base">
     <div class="header__content">
       <a class="header__logo" href="#">
@@ -91,7 +132,7 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><img data-src="https://images.unsplash.com/flagged/photo-1579632993381-847f6a71a3cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100"></div>
+            <div class="swiper-slide lazy"><img src="https://images.unsplash.com/flagged/photo-1579632993381-847f6a71a3cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&w=1170&q=100"></div>
             <div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
           </div>
@@ -100,30 +141,30 @@
         <script src="script/carousel.js"></script>
         
         <div class="hero__teaser div2">
-          <img data-src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=400&q=100" alt="" class="hero__img">
+          <img src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" data-src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&h=400&q=100" class="hero__img lazy">
           <div class="hero__teaserText">Top 10 waterfalls to analyse this week</div>
         </div>
         <div class="hero__teaser div3">
-          <img data-src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/06/little_girl_-bouncing-off-the-trampoline-1296x728-header.jpg?w=1155&h=1528" alt="" class="hero__img">
+          <img src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" data-src="https://images.unsplash.com/photo-1646271912756-44f11896cfea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&w=1180&q=80" class="hero__img lazy">
           <div class="hero__teaserText">Bouncing rates increased signifincantly last week</div>
         </div>
       </div>
 
       <div class="main__teasers main__section">
         <article class="teaser__base">
-          <img class="teaser__image" src="https://images.unsplash.com/photo-1631857455684-a54a2f03665f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100" alt="" class="card__img"><hr>
+          <img class="teaser__image" src="https://images.unsplash.com/photo-1631857455684-a54a2f03665f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&w=1170&q=100" class="card__img"><hr>
           <h1 class="teaser__title">First Party</h1>
           <div class="teaser__text"></div>
           <button class="teaser__link">Read more</button>
         </article>
         <article class="teaser__base">
-          <img class="teaser__image" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100" alt="" class="card__img"><hr>
+          <img class="teaser__image" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=pngfit=crop&w=1170&q=100" class="card__img"><hr>
           <h1 class="teaser__title">Second Party</h1>
           <div class="teaser__text"></div>
           <button class="teaser__link">Read more</button>
         </article>
         <article class="teaser__base">
-          <img class="teaser__image" src="https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100" alt="" class="card__img"><hr>
+          <img class="teaser__image" src="https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&w=1170&q=100" class="card__img"><hr>
           <h1 class="teaser__title">Third Party</h1>
           <div class="teaser__text"></div>
           <button class="teaser__link">Read more</button>
@@ -133,7 +174,7 @@
       <div class="main__weather main__section">
         <a class="weatherwidget-io" href="https://forecast7.com/en/48d1411d58/munich/" data-label_1="MUNICH" data-label_2="WEATHER" data-theme="original" >MUNICH WEATHER</a>
         <script>
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://blackhole.webpagetest.org/';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
         </script>
       </div>
       
@@ -172,4 +213,3 @@
   </div>
   <script src="script/app.js"></script>
 </body>
-</html>
