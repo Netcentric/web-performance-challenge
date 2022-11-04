@@ -12,6 +12,10 @@
   max-width: 1200px;
 }
 
+.footer__menu {
+  display: flex;
+}
+
 .footer__link {
   margin-right: 20px;
 }

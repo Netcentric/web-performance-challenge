@@ -1,4 +1,15 @@
+.teaser__list {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
 .teaser__base {
+  display: flex;
+  flex-direction: column;
+}
+
+.teaser__item {
   width: 32%;
   padding: 1.35rem;
   border-radius: 4px;
@@ -6,9 +17,36 @@
   font-family: 'Architects Daughter', serif;
 }
 
+.teaser__item.isfocused {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(38, 50, 190, .8);
+}
+
+.isfocused a:focus {
+  outline: none;
+}
+
+.teaser__item--isLink:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(38, 50, 190, .8);
+}
+
+.teaser__image {
+  order: -1;
+}
+
 .teaser__title {
+  display: block;
   font-size: 20px;
   font-weight: bold;
+  border-top: 1px solid lightgray;
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+.teaser__title a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .teaser__text {
@@ -16,6 +54,8 @@
 }
 
 .teaser__link {
+  display: block;
   text-align: end;
+  text-decoration: underline;
 }
 

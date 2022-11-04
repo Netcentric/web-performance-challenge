@@ -15,7 +15,3 @@
   border-style: outset;
   border-color: gray;
 }
-
-.form__button:hover {
-  cursor: default;
-}

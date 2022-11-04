@@ -95,9 +95,9 @@
   <header class="header__base">
     <div class="header__content">
       <a class="header__logo" href="#">
-        <img class="header__image" src="./logo.png">
+        <img class="header__image" src="./logo.png" alt="The Rum Diary">
       </a>
-      <div class="header__navigation">
+      <nav class="header__navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="#">
@@ -115,101 +115,134 @@
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
   </header>
 
   <main class="main__base">
     <div class="main__advertising"></div>
+
+    <h1 class="main__title visually-hidden" id="page-title">The Rum Diary Homepage</h1>
     
-    <div class="main__content">
+    <div class="main__content" role="main">
       <div class="main__news main__section">
         <marquee width="100%" direction="left" style="line-height: 30px;background-color: darkred;color: red;"></marquee>
       </div>
       
-      <div class="main__hero main__section">
-        <div class="hero__carousel div1 swiper">
+      <section class="main__hero main__section">
+        <a class="hero__carousel div1 swiper" href="fake-link.html" aria-label="Local restaurants finally optimising time to first bite">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide lazy"><img src="https://images.unsplash.com/flagged/photo-1579632993381-847f6a71a3cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&w=1170&q=100"></div>
+            <div class="swiper-slide lazy">
+              <img 
+                src="https://images.unsplash.com/flagged/photo-1579632993381-847f6a71a3cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&w=1170&q=100" 
+                alt="Person taking a bite of food">
+            </div>
             <div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
           </div>
           <div class="swiper-text">Local restaurants finally optimising time to first bite</div>
-        </div>
+        </a>
         <script src="script/carousel.js"></script>
         
-        <div class="hero__teaser div2">
-          <img src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" data-src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&h=400&q=100" class="hero__img lazy">
+        <a class="hero__teaser div2" href="fake-link.html" aria-label="Top 10 waterfalls to analyse this week">
+          <img 
+            src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" 
+            data-src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&h=400&q=100" 
+            class="hero__img lazy" 
+            alt="Waterfall in the woods">
           <div class="hero__teaserText">Top 10 waterfalls to analyse this week</div>
-        </div>
-        <div class="hero__teaser div3">
-          <img src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" data-src="https://images.unsplash.com/photo-1646271912756-44f11896cfea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&w=1180&q=80" class="hero__img lazy">
+        </a>
+        <a class="hero__teaser div3" href="fake-link.html" aria-label="Bouncing rates increased signifincantly last week">
+          <img 
+            src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" 
+            data-src="https://images.unsplash.com/photo-1646271912756-44f11896cfea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&w=1180&q=80" 
+            class="hero__img lazy"
+            alt="Child jumping on a trampoline">
           <div class="hero__teaserText">Bouncing rates increased signifincantly last week</div>
-        </div>
-      </div>
+        </a>
+      </section>
 
-      <div class="main__teasers main__section">
-        <article class="teaser__base">
-          <img class="teaser__image" src="https://images.unsplash.com/photo-1631857455684-a54a2f03665f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&w=1170&q=100" class="card__img"><hr>
-          <h1 class="teaser__title">First Party</h1>
-          <div class="teaser__text"></div>
-          <button class="teaser__link">Read more</button>
-        </article>
-        <article class="teaser__base">
-          <img class="teaser__image" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=pngfit=crop&w=1170&q=100" class="card__img"><hr>
-          <h1 class="teaser__title">Second Party</h1>
-          <div class="teaser__text"></div>
-          <button class="teaser__link">Read more</button>
-        </article>
-        <article class="teaser__base">
-          <img class="teaser__image" src="https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=png&fit=crop&w=1170&q=100" class="card__img"><hr>
-          <h1 class="teaser__title">Third Party</h1>
-          <div class="teaser__text"></div>
-          <button class="teaser__link">Read more</button>
-        </article>
-      </div>
+      <section class="main__teasers main__section">
+        <h2 class="visually-hidden">News</h2>
+        <ul class="teaser__list">
+          <li class="teaser__item">
+            <article class="teaser__base">
+              <h3 class="teaser__title"><a href="/mock-link-to-article.html">First Party</a></h3>
+              <img 
+                src="https://images.unsplash.com/photo-1631857455684-a54a2f03665f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100"
+                class="teaser__image"
+                alt="Many cakes on a table">
+              <p class="teaser__text"></p>
+            </article>
+          </li>
+          <li class="teaser__item">
+            <article class="teaser__base">
+              <h3 class="teaser__title"><a href="/mock-link-to-article.html">Second Party</a></h3>
+              <img 
+                src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100"
+                class="teaser__image"
+                alt="People toasting with wine glasses">
+              <p class="teaser__text"></p>
+            </article>
+          </li>
+          <li class="teaser__item">
+            <article class="teaser__base">
+              <h3 class="teaser__title"><a href="/mock-link-to-article.html">Third Party</a></h3>
+              <img
+                src="https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100" 
+                class="teaser__image" 
+                alt="People throwing color powder in a disco club">
+              <p class="teaser__text"></p>
+            </article>
+          </li>
+        </ul>
+      </section>
       
-      <div class="main__weather main__section">
+      <section class="main__weather main__section">
+        <h2 class="visually-hidden">Weather forecast</h2>
         <a class="weatherwidget-io" href="https://forecast7.com/en/48d1411d58/munich/" data-label_1="MUNICH" data-label_2="WEATHER" data-theme="original" >MUNICH WEATHER</a>
         <script>
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://blackhole.webpagetest.org/';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
         </script>
-      </div>
+      </section>
       
-      <div class="main__video main__section">
+      <section class="main__video main__section">
+        <h2 class="visually-hidden">Video and feedback form</h2>
         <iframe src="https://player.vimeo.com/video/44265326?h=1e8b36c00b&autoplay=1&loop=1&byline=0&muted=1&controls=0 " width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        <div class="form__base">
+        <form class="form__base">
           <div class="form__intro">Something about lighthouses, describing point of the video we are putting here to prove how awesome they really are, no.</div>
           <div class="from__control">
-            <label class="form__label">Name</label>
-            <input type="text" />
+            <label for="name" class="form__label">Name:</label>
+            <input id="name" type="text" autocomplete="name">
           </div>
           <div class="from__control">
-            <label class="form__label">Please share with us why do you think lighthouses are awesome: </label>
-            <textarea></textarea>
+            <label for="text" class="form__label">Please share with us why do you think lighthouses are awesome: </label><br>
+            <textarea id="text"></textarea>
           </div>
-          <a class="form__button" id="button" onclick="alert('Submitting using way too much JavaScript...')">Submit</a>
-        </div>
+          <button class="from__button" type="submit" onclick="alert('Submitting using way too much JavaScript...')">Submit</button>
+        </form>
+      </section>
     </div>
   </main>
   
-  <div class="disclaimer__base">
+  <aside class="disclaimer__base">
     <p class="disclaimer__text">
       This site is made for the purpose of web performance and accessibility testing challeng and it is full of bad practices on purpose.
     </p>
-  </div>
+  </aside>
   
-  <div class="footer__base">
+  <footer class="footer__base">
     <div class="footer__content">
-      <div class="footer__menu">
-        <a href="#" class="footer__link">About Us</a>
-        <a href="https://www.netcentric.biz/legal/imprint.html" class="footer__link">Imprint</a>
-        <a href="https://www.netcentric.biz/legal/privacy.html" class="footer__link">Privacy</a>
-      </div>
-      <div class="footer__sponsor">Powered by <a href="https://www.netcentric.biz/">Cognizant Netcentric</a></div>
+      <ul class="footer__menu">
+        <li><a href="fake-link.html" class="footer__link">About Us</a></li>
+        <li><a href="https://www.netcentric.biz/legal/imprint.html" class="footer__link">Imprint</a></li>
+        <li><a href="https://www.netcentric.biz/legal/privacy.html" class="footer__link">Privacy</a></li>
+      </ul>
+      <div class="footer__sponsor">Powered by <a href="https://www.netcentric.biz/" class="footer__link">Cognizant Netcentric</a></div>
     </div>
-  </div>
+  </footer>
   <script src="script/app.js"></script>
+  <script src="script/a11y.js"></script>
 </body>
